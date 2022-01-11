@@ -4,16 +4,12 @@ import { CustomSlider } from "../CustomSlider";
 import { mockSlides } from "./mock";
 import "./SliderCard.css";
 
-const SliderCard = ({ title }) => {
+const SliderCard = ({ title, sliderElement }) => {
   const navigate = useNavigate();
 
   const openMore = () => {
     navigate(`/category/${title}`);
   };
-
-  const uniqueId = (new Date().getTime() / Math.random())
-    .toString(16)
-    .replace(".", "");
 
   return (
     <section className="slider-card">
@@ -24,7 +20,7 @@ const SliderCard = ({ title }) => {
           <img src="/icons/arrow-right.svg" alt="arrow-right" />
         </button>
       </div>
-      <CustomSlider id={uniqueId} slides={mockSlides} />
+      <CustomSlider element={sliderElement} slides={mockSlides} />
     </section>
   );
 };
