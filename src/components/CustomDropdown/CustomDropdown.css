@@ -1,0 +1,31 @@
+.custom-dropdown {
+  max-width: 500px;
+  border-radius: 10px;
+  border: 1px solid rgba(150, 156, 175, 0.3);
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.dropdown-header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-body {
+  height: 0;
+}
+
+.dropdown-body-active {
+  padding: 0px 10px 10px;
+  height: auto;
+}
+
+.dropdown-arrow {
+  transition: 0.3s ease;
+}
+
+.dropdown-arrow-active {
+  transform: rotate(-180deg);
+}

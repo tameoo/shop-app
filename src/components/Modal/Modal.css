@@ -1,0 +1,24 @@
+.overlay-modal {
+  display: grid;
+  place-items: center;
+}
+
+.popup {
+  max-width: 600px;
+  width: 90%;
+  padding: 20px;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 6px 0px #333;
+}
+
+.popup-green {
+  background: #53d160;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

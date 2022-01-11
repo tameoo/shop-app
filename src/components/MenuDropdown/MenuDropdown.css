@@ -1,0 +1,40 @@
+.menu-item-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-sublist li {
+  margin-bottom: 10px;
+}
+
+.menu-sublist li:first-child {
+  margin-top: 10px;
+}
+
+.menu-sublist {
+  height: 0;
+  overflow: hidden;
+  list-style-type: none;
+  color: #969caf;
+  transition: 0.35s ease;
+}
+
+.menu-sublist-active {
+  height: auto;
+}
+
+.menu-arrow {
+  transition: 0.35s ease;
+}
+
+.menu-arrow-active {
+  transform: rotate(-180deg);
+}

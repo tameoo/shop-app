@@ -1,0 +1,38 @@
+.footer {
+  background: #f4f6fc;
+  padding: 30px 20px 10px 20px;
+}
+
+.footer-logo {
+  margin-bottom: 10px;
+}
+
+.footer-descr {
+  margin-bottom: 20px;
+  line-height: 24px;
+  color: #969caf;
+}
+
+.footer-list-item {
+  display: flex;
+  gap: 20px;
+  line-height: 24px;
+  color: #252728;
+  border-bottom: 1px solid #b7bccc;
+  padding: 15px 0px;
+}
+
+.footer-list-item:last-child {
+  border-bottom: none;
+}
+
+.footer-tellink {
+  line-height: 22px;
+  color: #252728;
+  text-decoration: none;
+}
+
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+}

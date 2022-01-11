@@ -1,0 +1,122 @@
+.detail {
+  padding: 10px 0px;
+}
+
+.detail-slider {
+  margin-bottom: 20px;
+}
+
+.detail-img {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.detail-padding {
+  padding: 0px 20px;
+}
+.detail-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #252728;
+}
+
+.detail-subtitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.detail-discount {
+  padding: 5px;
+  color: #fff;
+  background: #f25e7f;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+
+.detail-descr {
+  font-size: 14px;
+  line-height: 16px;
+  color: #969caf;
+  margin-bottom: 25px;
+}
+
+.detail-option {
+  margin-bottom: 15px;
+}
+
+.detail-option h3 {
+  font-size: 16px;
+  line-height: 20px;
+  color: #252728;
+  margin-bottom: 10px;
+}
+
+.detail-option-block {
+  display: flex;
+  gap: 10px;
+}
+
+.color-circle {
+  height: 30px;
+  width: 30px;
+  background: #53d160;
+  border-radius: 100%;
+}
+
+.detail-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.detail-modal-title {
+  font-size: 18px;
+  line-height: 20px;
+  color: #252728;
+  margin-bottom: 10px;
+}
+
+.detail-modal-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.detail-modal-img {
+  width: 80px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.detail-modal-descr {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-modal-descr p {
+  word-wrap: break-word;
+}
+
+.detail-modal-descr span {
+  font-size: 14px;
+  line-height: 16px;
+  color: #969caf;
+}
+
+.detail-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.detail-modal-btn-group {
+  display: flex;
+  gap: 10px;
+}
