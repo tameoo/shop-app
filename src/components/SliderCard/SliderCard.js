@@ -4,7 +4,7 @@ import { CustomSlider } from "../CustomSlider";
 import { mockSlides } from "./mock";
 import "./SliderCard.css";
 
-const SliderCard = ({ title, sliderElement }) => {
+const SliderCard = ({ title }) => {
   const navigate = useNavigate();
 
   const openMore = () => {
@@ -20,7 +20,7 @@ const SliderCard = ({ title, sliderElement }) => {
           <img src="/icons/arrow-right.svg" alt="arrow-right" />
         </button>
       </div>
-      <CustomSlider element={sliderElement} slides={mockSlides} />
+      <CustomSlider slides={mockSlides} />
     </section>
   );
 };

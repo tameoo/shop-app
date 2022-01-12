@@ -19,9 +19,9 @@ const MainPage = () => {
           alt="shopping-cart"
         />
       </main>
-      <SliderCard title={"Новинки"} sliderElement="new-items" />
-      <SliderCard title={"Товары со скидкой"} sliderElement="items-discount" />
-      <SliderCard title={"Футболки"} sliderElement="items-tshirt" />
+      <SliderCard title={"Новинки"} />
+      <SliderCard title={"Товары со скидкой"} />
+      <SliderCard title={"Футболки"} />
       <Footer />
     </React.Fragment>
   );

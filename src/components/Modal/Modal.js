@@ -3,7 +3,7 @@ import "./Modal.css";
 
 const Modal = ({ children, onClose }) => {
   return (
-    <div className="overlay overlay-modal">
+    <div className="overlay-modal">
       <div className="popup">
         {children}
         <img

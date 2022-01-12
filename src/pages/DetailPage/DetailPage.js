@@ -13,6 +13,7 @@ const DetailPage = () => {
   const { id } = useParams();
   const [isModalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
+
   return (
     <React.Fragment>
       <Header title={id} />
@@ -89,7 +90,11 @@ const DetailPage = () => {
             </div>
           </div>
           <div className="detail-modal-footer">
-            <div>+=</div>
+            <div className="detail-add-item">
+              <img src="/icons/minus.svg" alt="sign" />
+              <span>1</span>
+              <img src="/icons/plus.svg" alt="sign" />
+            </div>
             <div className="card-price-block">
               <span className="card-price">12 490 ₸</span>
               <span className="card-discount">25 990 ₸</span>

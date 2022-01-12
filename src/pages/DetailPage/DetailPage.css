@@ -120,3 +120,10 @@
   display: flex;
   gap: 10px;
 }
+
+.detail-add-item {
+  font-size: 24px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
