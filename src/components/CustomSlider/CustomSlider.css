@@ -6,22 +6,3 @@
   display: flex;
   gap: 10px;
 }
-
-.slider-arrows {
-  margin-top: 10px;
-  display: flex;
-  gap: 20px;
-}
-
-.slider-arrows button {
-  border-radius: 10px;
-  padding: 5px 10px;
-  background: #f25e7f;
-  outline: none;
-  border: none;
-}
-
-.slider-arrow {
-  color: #fff;
-  height: 19px;
-}

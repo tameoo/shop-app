@@ -14,6 +14,7 @@ const GridCards = ({ render }) => {
           price={item.price}
           discount={item.discount}
           showButton={item.showButton}
+          isCardFavorite={item.isFavorite}
         />
       ))}
     </section>

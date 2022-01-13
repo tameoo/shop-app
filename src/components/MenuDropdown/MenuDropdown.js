@@ -8,10 +8,10 @@ const MenuDropdown = ({ title }) => {
   return (
     <React.Fragment>
       <div className="menu-item-title" onClick={() => setOpen(!isOpen)}>
-        <span>{title}</span>
+        <span className="menu-dropdown-title">{title}</span>
         <img
-          className={`menu-arrow ${isOpen && "menu-arrow-active"}`}
-          src="/icons/arrow-down.svg"
+          className="menu-arrow"
+          src={isOpen ? "/icons/arrow-down-blue.svg" : "/icons/arrow-down.svg"}
           alt="arrow-down"
         />
       </div>

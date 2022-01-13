@@ -8,7 +8,10 @@ import "./Menu.css";
 const Menu = () => {
   const dispatch = useDispatch();
 
-  const closeMenu = () => dispatch(showMenu(false));
+  const closeMenu = () => {
+    document.body.classList.remove("no-scroll");
+    dispatch(showMenu(false));
+  };
 
   return (
     <div className="overlay">
@@ -19,7 +22,7 @@ const Menu = () => {
         </div>
         <ul className="menu-list">
           <li className="menu-item">
-            <MenuLink title={"Главная"} to={"/"} />
+            <MenuLink mainlink={true} title={"Главная"} to={"/"} />
           </li>
           <li className="menu-item">
             <MenuDropdown title={"Женщинам"} />

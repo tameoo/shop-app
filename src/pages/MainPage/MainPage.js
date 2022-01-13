@@ -2,6 +2,7 @@ import React from "react";
 import { Header } from "../../components/Header";
 import { SliderCard } from "../../components/SliderCard";
 import { Footer } from "../../components/Footer";
+import { CategoryButtons } from "../../components/CategoryButtons";
 import "./MainPage.css";
 
 const MainPage = () => {
@@ -21,6 +22,9 @@ const MainPage = () => {
       </main>
       <SliderCard title={"Новинки"} />
       <SliderCard title={"Товары со скидкой"} />
+      <CategoryButtons
+        buttons={["Футболки", "Рубашки", "Штаны", "Обувь", "Другое"]}
+      />
       <SliderCard title={"Футболки"} />
       <Footer />
     </React.Fragment>

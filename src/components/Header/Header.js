@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { showMenu } from "../../redux/menuReducer";
 
 import "./Header.css";
@@ -10,6 +10,8 @@ const Header = ({
   showBackIcon = false,
   showAdmin = false,
   showButtons = true,
+  showCart = true,
+  showFavorite = true,
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,7 +29,10 @@ const Header = ({
           <img
             src="/icons/menu.svg"
             alt="menu"
-            onClick={() => dispatch(showMenu(true))}
+            onClick={() => {
+              document.body.classList.add("no-scroll");
+              dispatch(showMenu(true));
+            }}
           />
         )}
         {title ? (
@@ -39,8 +44,16 @@ const Header = ({
       {showButtons && (
         <div className="header-block">
           {showAdmin && <button className="text-btn">Админ панель</button>}
-          <img src="/icons/heart.svg" alt="heart" />
-          <img src="/icons/cart.svg" alt="cart" />
+          {showFavorite && (
+            <Link to="/favorites">
+              <img src="/icons/heart-regular.svg" alt="heart" />
+            </Link>
+          )}
+          {showCart && (
+            <Link to="/cart">
+              <img src="/icons/cart.svg" alt="cart" />
+            </Link>
+          )}
         </div>
       )}
     </header>

@@ -1,10 +1,9 @@
 .filter {
+  overflow: auto;
   padding: 20px;
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
   background: #fff;
   display: flex;
@@ -33,4 +32,16 @@
 
 .filter-item {
   margin-bottom: 20px;
+}
+
+@media (min-width: 500px) {
+  .filter {
+    width: 40%;
+    right: 0;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  .filter {
+    width: 60%;
+  }
 }

@@ -4,21 +4,26 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+  padding: 10px 20px;
+}
+
+.setting-option {
+  width: 100%;
+}
+
+.setting-filter {
+  gap: 13px;
 }
 
 .setting-option,
 .setting-filter {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  padding: 10px;
   border: none;
   outline: none;
-  border-radius: 10px;
-  margin-bottom: 5px;
-  background: rgba(0, 0, 0, 0.03);
+  background: transparent;
 }
 
 .setting-option span,
@@ -29,32 +34,31 @@
 
 .setting-option-wrapper {
   position: relative;
+  width: 206px;
 }
+
 .option-list {
   display: none;
   width: 100%;
   position: absolute;
-  top: 45px;
+  top: 29px;
   list-style-type: none;
-  background: #fff;
   padding: 10px;
   border-radius: 10px;
   z-index: 9;
-  box-shadow: 0px 1px 4px 0px #000;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 0px 0px 3px 3px;
+}
+
+.option-item {
+  text-align: justify;
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 20px;
 }
 
 .option-list-active {
   display: block;
-}
-
-.setting-arrow-down-active {
-  transform: rotate(-180deg);
-}
-
-.setting-arrow-down {
-  transition: 0.35s ease;
-}
-
-.option-item {
-  margin-bottom: 5px;
 }

@@ -21,38 +21,40 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="filter">
-      <div className="filter-inner">
-        <div className="filter-header">
-          <h2>Фильтры</h2>
-          <img
-            src="/icons/close.svg"
-            alt="close"
-            onClick={() => dispatch(showFilter(false))}
-          />
-        </div>
-        <div className="filter-item">
-          <h4>Цена</h4>
-          <div>Range</div>
-        </div>
-        <div className="filter-item">
-          <h4>Размер</h4>
-          <div className="filter-group">
-            {size.map((item) => (
-              <CustomBox text={item} />
-            ))}
+    <div className="overlay">
+      <div className="filter">
+        <div className="filter-inner">
+          <div className="filter-header">
+            <h2>Фильтры</h2>
+            <img
+              src="/icons/close.svg"
+              alt="close"
+              onClick={() => dispatch(showFilter(false))}
+            />
+          </div>
+          <div className="filter-item">
+            <h4>Цена</h4>
+            <div>Range</div>
+          </div>
+          <div className="filter-item">
+            <h4>Размер</h4>
+            <div className="filter-group">
+              {size.map((item, index) => (
+                <CustomBox key={index} text={item} />
+              ))}
+            </div>
+          </div>
+          <div className="filter-item">
+            <h4>Цвет</h4>
+            <div className="filter-group">
+              {color.map((item, index) => (
+                <CustomBox key={index} text={item} isColor={true} />
+              ))}
+            </div>
           </div>
         </div>
-        <div className="filter-item">
-          <h4>Цвет</h4>
-          <div className="filter-group">
-            {color.map((item) => (
-              <CustomBox text={item} isColor={true} />
-            ))}
-          </div>
-        </div>
+        <CustomButton text={"Применить"} clazz={"primary"} />
       </div>
-      <CustomButton text={"Применить"} isPrimary={true} />
     </div>
   );
 };

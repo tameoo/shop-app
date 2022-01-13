@@ -7,6 +7,7 @@ import { CustomButton } from "../../components/CustomButton";
 import { CustomDropdown } from "../../components/CustomDropdown";
 import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
+import { Tag } from "../../components/Tag";
 import "./DetailPage.css";
 
 const DetailPage = () => {
@@ -28,7 +29,7 @@ const DetailPage = () => {
               <span className="card-price">12 490 ₸</span>
               <span className="card-discount">25 990 ₸</span>
             </div>
-            <div className="detail-discount">-50%</div>
+            <Tag text={"-50%"} tagCard={false} />
           </div>
           <p className="detail-descr">
             Платье миди с круглым вырезом и длинными рукавами со складками.
@@ -53,7 +54,7 @@ const DetailPage = () => {
           <div className="detail-btn-group">
             <CustomButton
               text={"Заказать"}
-              isPrimary={true}
+              clazz={"primary"}
               onPressButton={() => setModalOpen(true)}
             />
             <CustomButton text={"Написать"} icon={"/icons/whatsup.svg"} />
@@ -70,9 +71,9 @@ const DetailPage = () => {
               "Стандарт Green to Wear 2.0 направлен на минимизацию воздействия текстильного производства на окружающую среду. Для этого мы разработали программу Inditex The List, которая помогает нам обеспечивать чистоту производственных процессов, а также безопасность и гигиеничность нашей одежды."
             }
           />
-          <SliderCard title={"Похожие товары"} />
         </div>
       </section>
+      <SliderCard title={"Похожие товары"} />
       <Footer />
       {isModalOpen && (
         <Modal onClose={() => setModalOpen(false)}>
@@ -103,12 +104,12 @@ const DetailPage = () => {
           <div className="detail-modal-btn-group">
             <CustomButton
               text={"Заказать сейчас"}
-              isPrimary={true}
+              clazz={"order-now"}
               onPressButton={() => navigate(`/order/${id}`)}
             />
             <CustomButton
               text={"В корзину"}
-              isSecondary={true}
+              clazz={"primary"}
               onPressButton={() => {}}
             />
           </div>

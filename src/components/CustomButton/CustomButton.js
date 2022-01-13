@@ -1,15 +1,7 @@
 import React from "react";
 import "./CustomButton.css";
 
-const CustomButton = ({
-  text,
-  icon,
-  isPrimary,
-  isSecondary,
-  isPrevent,
-  clazz,
-  onPressButton,
-}) => {
+const CustomButton = ({ text, icon, clazz, onPressButton }) => {
   return (
     (icon && (
       <button
@@ -22,9 +14,9 @@ const CustomButton = ({
     )) || (
       <button
         className={`custom-btn  ${
-          (isPrimary && "primary") ||
-          (isSecondary && "secondary") ||
-          (isPrevent && "prevent")
+          (clazz === "primary" && "primary") ||
+          (clazz === "secondary" && "secondary") ||
+          (clazz === "prevent" && "prevent")
         } ${clazz}`}
         onClick={onPressButton}
       >

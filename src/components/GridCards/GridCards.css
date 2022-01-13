@@ -1,7 +1,7 @@
 .grid-cards {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(154px, 1fr));
   grid-template-rows: 1fr;
   gap: 15px;
 }

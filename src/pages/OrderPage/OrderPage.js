@@ -37,7 +37,7 @@ const OrderPage = () => {
             <input
               className="order-text"
               type="text"
-              placeholder="+7(xxx)xxx xx xx"
+              placeholder="+7 (xxx) xxx xx xx"
             />
             <img
               className="order-form-img"
@@ -46,7 +46,7 @@ const OrderPage = () => {
             />
           </div>
           <div className="order-delivery">
-            <h3>Доставка</h3>
+            <h4>Доставка</h4>
             <div className="order-delivery-location">
               <label className="order-delivery-btn">
                 <input type="radio" className="order-radio" name="radio" />
@@ -90,7 +90,7 @@ const OrderPage = () => {
               <span>{+price + 1000} ₸</span>
             </div>
           </div>
-          <CustomButton text={"Заказать"} isPrimary={false} isPrevent={true} />
+          <CustomButton text={"Заказать"} clazz={"prevent"} />
         </form>
       </section>
       <Footer />

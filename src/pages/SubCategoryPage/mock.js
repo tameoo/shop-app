@@ -1,33 +1,38 @@
 export const subCategoryData = [
   {
-    id: Date.now() + 100 * Math.random(),
+    id: 1,
     title: "Qarala",
     path: "/images/female.svg",
     price: "15 690",
+    isFavorite: false,
   },
   {
-    id: Date.now() + 100 * Math.random(),
+    id: 2,
     title: "EnvyLab",
     path: "/images/male.svg",
+    isFavorite: false,
     price: "15 690",
   },
   {
-    id: Date.now() + 100 * Math.random(),
+    id: 3,
     title: "Zara",
     path: "/images/girl.svg",
+    isFavorite: false,
     price: "15 690",
   },
   {
-    id: Date.now() + 100 * Math.random(),
+    id: 4,
     title: "Stradivarius",
     path: "/images/boy.svg",
     price: "15 690",
+    isFavorite: false,
     discount: "20 000",
   },
   {
-    id: Date.now() + 100 * Math.random(),
+    id: 5,
     title: "Jenil",
     path: "/images/house.svg",
+    isFavorite: false,
     price: "15 690",
   },
 ];

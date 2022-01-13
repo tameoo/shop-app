@@ -1,11 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
+import { Tag } from "../Tag/Tag";
 import "./Card.css";
 
-const Card = ({ id, title, price, path, discount, showButton = true }) => {
+const Card = ({ id, title, price, path, discount, tag, showButton = true }) => {
   const navigate = useNavigate();
 
   const openDetail = () => {
+    console.log("next");
     navigate(`/detail/${id}`);
   };
 
@@ -13,11 +16,8 @@ const Card = ({ id, title, price, path, discount, showButton = true }) => {
     <div className="card" onClick={openDetail}>
       <div className="card-stack">
         <img className="card-img" src={path} alt={title} />
-        {showButton && (
-          <button className="card-heart">
-            <img src="/icons/heart.svg" alt="heart" />
-          </button>
-        )}
+        {showButton && <FavoriteButton />}
+        {tag && <Tag text={tag} />}
       </div>
       <p className="card-title">{title}</p>
       {price && (

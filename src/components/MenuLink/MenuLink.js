@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { showMenu } from "../../redux/menuReducer";
 import "./MenuLink.css";
 
-const MenuLink = ({ title, to }) => {
+const MenuLink = ({ mainlink, title, to }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -14,7 +14,10 @@ const MenuLink = ({ title, to }) => {
   };
 
   return (
-    <button className="menu-link-button" onClick={pushLink}>
+    <button
+      className={`menu-link-button ${mainlink && "menu-dropdown-title"}`}
+      onClick={pushLink}
+    >
       {title}
     </button>
   );

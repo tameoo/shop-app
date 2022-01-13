@@ -13,39 +13,13 @@ import "./SubCategoryPage.css";
 const SubCategoryPage = () => {
   const { title } = useParams();
   const dispatch = useDispatch();
-  const [isSettingOpen, setSettingOpen] = useState(false);
 
   return (
     <React.Fragment>
       <Header title={title} />
       <SearchForm />
-      <CategoryButtons />
       <div className="setting">
-        <div className="setting-option-wrapper">
-          <button
-            className="setting-option"
-            onClick={() => setSettingOpen(!isSettingOpen)}
-          >
-            <img src="/icons/option.svg" alt="option" />
-            <span>По возрастанию цены</span>
-            <img
-              className={`setting-arrow-down ${
-                isSettingOpen && "setting-arrow-down-active"
-              }`}
-              src="/icons/arrow-down.svg"
-              alt="arrow-down"
-            />
-          </button>
-          <ul
-            className={`option-list ${isSettingOpen && "option-list-active"}`}
-          >
-            <li className="option-item">По возрастанию цены</li>
-            <li className="option-item">По убыванию цены</li>
-            <li className="option-item">По новизне</li>
-            <li className="option-item">По популярности</li>
-            <li className="option-item">По скидкам</li>
-          </ul>
-        </div>
+        <Option />
 
         <button
           className="setting-filter"
@@ -55,6 +29,7 @@ const SubCategoryPage = () => {
           <span>Фильтры</span>
         </button>
       </div>
+      <CategoryButtons buttons={["Все", "Женщинам", "Мужчинам", "Детям"]} />
       <GridCards render={subCategoryData} />
       <Footer />
     </React.Fragment>
@@ -62,3 +37,52 @@ const SubCategoryPage = () => {
 };
 
 export { SubCategoryPage };
+
+const Option = () => {
+  const [isOptionOpen, setOptionOpen] = useState(false);
+  const [isActiveOption, setActiveOption] = useState("По популярности");
+  const option = [
+    "По возрастанию цены",
+    "По убыванию цены",
+    "По новизне",
+    "По популярности",
+    "По скидкам",
+  ];
+
+  const chooseItem = (item) => {
+    setOptionOpen(false);
+    setActiveOption(item);
+  };
+
+  return (
+    <div className="setting-option-wrapper">
+      <button
+        className="setting-option"
+        onClick={() => setOptionOpen(!isOptionOpen)}
+      >
+        <img src="/icons/option.svg" alt="option" />
+        <span>{isActiveOption}</span>
+        <img
+          className="setting-arrow-down"
+          src={`${
+            isOptionOpen
+              ? "/icons/arrow-down-blue.svg"
+              : "/icons/arrow-down.svg"
+          }`}
+          alt="arrow-down"
+        />
+      </button>
+      <ul className={`option-list ${isOptionOpen && "option-list-active"}`}>
+        {option.map((item) => (
+          <li
+            key={item}
+            className="option-item"
+            onClick={() => chooseItem(item)}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};

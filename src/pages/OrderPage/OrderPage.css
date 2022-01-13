@@ -8,10 +8,14 @@
   margin-bottom: 10px;
 }
 
-.order-header h2 {
+.order-header h3 {
   font-size: 18px;
-  line-height: 22px;
   color: #252728;
+}
+
+.order-header span {
+  font-size: 16px;
+  color: #969caf;
 }
 
 .order-img {
@@ -32,6 +36,7 @@
   width: 100%;
   padding: 15px 15px 15px 35px;
   border: 1px solid #e5e5e5;
+  font-size: 14px;
   border-radius: 10px;
   outline: none;
 }
@@ -45,6 +50,12 @@
 
 .order-delivery {
   margin-bottom: 20px;
+}
+
+.order-delivery h4 {
+  font-weight: normal;
+  font-size: 14px;
+  color: #252728;
 }
 
 .order-price {
@@ -61,16 +72,20 @@
 }
 
 .order-price-items h3 {
-  font-weight: 300;
+  font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
-  color: #969caf;
+  color: #969cb0;
+}
+
+.order-price-items span {
+  font-size: 14px;
+  line-height: 18px;
+  color: #252728;
 }
 
 .order-price-items:nth-child(3) h3 {
-  font-weight: 700;
+  font-weight: normal;
   font-size: 16px;
-  line-height: 20px;
   color: #252728;
 }
 
@@ -118,8 +133,8 @@
 }
 
 .order-delivery-wrapper h5 {
+  font-weight: normal;
   font-size: 12px;
-  line-height: 16px;
   color: #b7bccc;
 }
 
@@ -127,5 +142,5 @@
   margin: 15px 0px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
 }

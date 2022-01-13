@@ -7,6 +7,8 @@ import {
   SubCategoryPage,
   DetailPage,
   OrderPage,
+  FavoritePage,
+  CartPage,
 } from "./pages";
 import { Menu } from "./components/Menu";
 import { Filter } from "./components/Filter";
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="/category/:title" element={<SubCategoryPage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/order/:id" element={<OrderPage />} />
+        <Route path="/favorites" element={<FavoritePage />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       {isMenuOpen && <Menu />}
       {isFilterOpen && <Filter />}
