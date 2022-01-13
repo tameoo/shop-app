@@ -9,6 +9,7 @@ const MenuLink = ({ mainlink, title, to }) => {
   const dispatch = useDispatch();
 
   const pushLink = () => {
+    document.body.classList.remove("no-scroll");
     dispatch(showMenu(false));
     navigate(to);
   };
