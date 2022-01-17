@@ -8,19 +8,25 @@ import { CustomDropdown } from "../../components/CustomDropdown";
 import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
+import { DetailImgSlider } from "../../components/DetailImgSlider";
 import "./DetailPage.css";
 
 const DetailPage = () => {
   const { id } = useParams();
   const [isModalOpen, setModalOpen] = useState(false);
   const navigate = useNavigate();
+  const slides = [
+    "/images/detail.svg",
+    "/images/detail.svg",
+    "/images/detail.svg",
+  ];
 
   return (
     <React.Fragment>
       <Header title={id} />
       <section className="detail">
         <div className="detail-slider">
-          <img className="detail-img" src="/images/detail.svg" alt="detail" />
+          <DetailImgSlider slides={slides} />
         </div>
         <div className="detail-padding">
           <h2 className="detail-title">Платье из бархата с драпировкой</h2>

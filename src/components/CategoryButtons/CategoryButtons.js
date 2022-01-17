@@ -14,7 +14,7 @@ const CategoryButtons = ({ buttons }) => {
           clazz={
             activeButton === item
               ? "primary category-btn-padding"
-              : "secondary category-btn-padding"
+              : "secondary-borderless category-btn-padding"
           }
           onPressButton={() => setActiveButton(item)}
         />

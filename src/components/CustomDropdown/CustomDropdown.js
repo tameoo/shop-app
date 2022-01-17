@@ -8,11 +8,19 @@ const CustomDropdown = ({ title, descr }) => {
     <div className="custom-dropdown">
       <div className="dropdown-header" onClick={() => setOpen(!isOpen)}>
         <span>{title}</span>
-        <img
-          className={`dropdown-arrow ${isOpen && "dropdown-arrow-active"}`}
-          src="/icons/arrow-down.svg"
-          alt="arrow"
-        />
+        {isOpen ? (
+          <img
+            className={"dropdown-arrow"}
+            src="/icons/arrow-down-blue.svg"
+            alt="arrow"
+          />
+        ) : (
+          <img
+            className={"dropdown-arrow"}
+            src="/icons/arrow-down.svg"
+            alt="arrow"
+          />
+        )}
       </div>
       <div className={`dropdown-body ${isOpen && "dropdown-body-active"}`}>
         {descr}

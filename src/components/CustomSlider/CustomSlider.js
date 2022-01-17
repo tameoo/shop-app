@@ -37,7 +37,7 @@ const CustomSlider = ({ slides }) => {
 
   return (
     <React.Fragment>
-      <Slider {...sliderSettings}>
+      <Slider {...sliderSettings} className="slick-track-custom">
         {slides.map((item) => (
           <Card
             key={item.id}

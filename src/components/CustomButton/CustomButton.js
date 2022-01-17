@@ -16,7 +16,8 @@ const CustomButton = ({ text, icon, clazz, onPressButton }) => {
         className={`custom-btn  ${
           (clazz === "primary" && "primary") ||
           (clazz === "secondary" && "secondary") ||
-          (clazz === "prevent" && "prevent")
+          (clazz === "prevent" && "prevent") ||
+          (clazz === "secondary-borderless" && "secondary-borderless")
         } ${clazz}`}
         onClick={onPressButton}
       >
