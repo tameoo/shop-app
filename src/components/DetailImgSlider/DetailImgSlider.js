@@ -18,7 +18,7 @@ const DetailImgSlider = ({ slides }) => {
   };
 
   return (
-    <Slider {...sliderSettings}>
+    <Slider {...sliderSettings} className="detail-slider">
       {slides.map((item, index) => (
         <div key={index} className="detail-img-wrapper">
           <img className="detail-img" src={item} alt="detail" />

@@ -3,6 +3,7 @@ import { CustomButton } from "../CustomButton";
 import { CustomBox } from "../CustomBox";
 import { useDispatch } from "react-redux";
 import { showFilter } from "../../redux/filterReducer";
+import { Slider } from "@mui/material";
 import "./Filter.css";
 
 const Filter = () => {
@@ -19,6 +20,11 @@ const Filter = () => {
     "Бежевый",
   ];
   const dispatch = useDispatch();
+  const [value, setValue] = React.useState([1500, 100000]);
+
+  const handleChange = (_, newValue) => {
+    setValue(newValue);
+  };
 
   return (
     <div className="overlay">
@@ -34,7 +40,19 @@ const Filter = () => {
           </div>
           <div className="filter-item">
             <h4>Цена</h4>
-            <div>Range</div>
+            <div className="range-slider-wrapper">
+              <Slider
+                getAriaLabel={() => "Price range"}
+                value={value}
+                onChange={handleChange}
+                min={1499}
+                max={100000}
+              />
+            </div>
+            <div className="range-number">
+              <span>от {value[0]} ₸</span>
+              <span>до {value[1]} ₸</span>
+            </div>
           </div>
           <div className="filter-item">
             <h4>Размер</h4>

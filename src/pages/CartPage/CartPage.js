@@ -7,6 +7,7 @@ const CartPage = () => {
   return (
     <React.Fragment>
       <Header title={"Корзина"} showCart={false} />
+      <section className="cart-page"></section>
       <Footer />
     </React.Fragment>
   );

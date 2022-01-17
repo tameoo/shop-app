@@ -45,3 +45,34 @@
     width: 60%;
   }
 }
+
+.range-slider-wrapper {
+  padding: 10px;
+}
+
+.range-bar-custom {
+  background: #40bfff;
+}
+
+.range-handle-custom {
+  background: #fff;
+}
+
+.range-number {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.MuiSlider-thumb {
+  color: #fff;
+  box-shadow: 0px 0px 15px rgba(36, 39, 40, 0.07);
+}
+
+.MuiSlider-track {
+  color: #40bfff;
+}
+
+.MuiSlider-rail {
+  color: #b7bccc;
+}
