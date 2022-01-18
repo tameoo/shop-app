@@ -33,13 +33,3 @@
   transform: translateY(-50%);
   left: 10px;
 }
-
-.form-btn {
-  font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  background: #40bfff;
-  border: none;
-  outline: none;
-}

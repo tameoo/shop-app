@@ -14,7 +14,6 @@ const SearchForm = () => {
           />
           <img src="/icons/search.svg" alt="search" />
         </div>
-        <button className="form-btn">Поиск</button>
       </form>
     </div>
   );
