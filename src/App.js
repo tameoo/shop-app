@@ -12,20 +12,22 @@ import {
 } from "./pages";
 import { Menu } from "./components/Menu";
 import { Filter } from "./components/Filter";
+import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
 
 const App = () => {
   const isMenuOpen = useSelector((state) => state.menu.isOpen);
   const isFilterOpen = useSelector((state) => state.filter.isOpen);
-
+  console.log("render");
   return (
     <div className="container">
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/category" element={<CategoryPage />} />
         <Route path="/category/:title" element={<SubCategoryPage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
-        <Route path="/order/:id" element={<OrderPage />} />
+        <Route path="/order" element={<OrderPage />} />
         <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>

@@ -113,12 +113,12 @@ const DetailPage = () => {
             <CustomButton
               text={"Заказать сейчас"}
               clazz={"order-now"}
-              onPressButton={() => navigate(`/order/${id}`)}
+              onPressButton={() => navigate("/order")}
             />
             <CustomButton
               text={"В корзину"}
               clazz={"primary"}
-              onPressButton={() => {}}
+              onPressButton={() => navigate("/cart")}
             />
           </div>
         </Modal>

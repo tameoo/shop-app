@@ -10,7 +10,7 @@ export const mockSlides = [
     id: 2,
     title: "Свитер",
     price: 10990,
-    path: "/images/mock2.svg",
+    path: "/images/mock.svg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const mockSlides = [
     id: 4,
     title: "Свитер",
     price: 10990,
-    path: "/images/mock2.svg",
+    path: "/images/mock.svg",
   },
   {
     id: 5,
@@ -35,6 +35,6 @@ export const mockSlides = [
     id: 6,
     title: "Свитер",
     price: 10990,
-    path: "/images/mock2.svg",
+    path: "/images/mock.svg",
   },
 ];

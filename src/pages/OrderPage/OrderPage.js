@@ -85,7 +85,7 @@ const OrderPage = () => {
               <h3>Сумма доставки</h3>
               <span>1000 ₸</span>
             </div>
-            <div className="order-price-items">
+            <div className="order-price-items order-price-last">
               <h3>Общая сумма</h3>
               <span>{+price + 1000} ₸</span>
             </div>

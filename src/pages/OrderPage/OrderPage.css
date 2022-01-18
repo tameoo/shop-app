@@ -59,6 +59,7 @@
 }
 
 .order-price {
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -83,13 +84,13 @@
   color: #252728;
 }
 
-.order-price-items:nth-child(3) h3 {
+.order-price-last h3 {
   font-weight: normal;
   font-size: 16px;
   color: #252728;
 }
 
-.order-price-items:nth-child(3) span {
+.order-price-last span {
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
@@ -113,7 +114,7 @@
 }
 
 .order-radio:before {
-  content: "";
+  content: url("/public/icons/close.svg");
   width: 12px;
   height: 12px;
   border-radius: 100%;
