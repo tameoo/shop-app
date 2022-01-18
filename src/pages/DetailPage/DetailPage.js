@@ -10,6 +10,7 @@ import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
 import { DetailImgSlider } from "../../components/DetailImgSlider";
 import "./DetailPage.css";
+import { FavoriteButton } from "../../components/FavoriteButton";
 
 const DetailPage = () => {
   const { id } = useParams();
@@ -27,6 +28,7 @@ const DetailPage = () => {
       <section className="detail">
         <div className="detail-slider">
           <DetailImgSlider slides={slides} />
+          <FavoriteButton changeSize={true} />
         </div>
         <div className="detail-padding">
           <h2 className="detail-title">Платье из бархата с драпировкой</h2>

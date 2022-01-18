@@ -1,5 +1,4 @@
 import React from "react";
-import { FavoriteButton } from "../FavoriteButton";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -22,7 +21,6 @@ const DetailImgSlider = ({ slides }) => {
       {slides.map((item, index) => (
         <div key={index} className="detail-img-wrapper">
           <img className="detail-img" src={item} alt="detail" />
-          <FavoriteButton changeSize={true} />
         </div>
       ))}
     </Slider>

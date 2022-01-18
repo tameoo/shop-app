@@ -3,6 +3,7 @@
 }
 
 .detail-slider {
+  position: relative;
   margin-bottom: 20px;
 }
 
