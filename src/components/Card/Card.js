@@ -4,13 +4,13 @@ import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
 import { Tag } from "../Tag/Tag";
 import "./Card.css";
 
-const Card = ({ id, title, price, path, discount, tag, showButton = true }) => {
+const Card = ({ id, title, price, path, discount, tag, body }) => {
   return (
     <Link to={`/detail/${id}`}>
       <div className="card">
         <div className="card-stack">
           <img className="card-img" src={path} alt={title} />
-          {showButton && <FavoriteButton />}
+          <FavoriteButton favoriteItem={body} />
           {tag && <Tag text={tag} />}
         </div>
         <p className="card-title">{title}</p>

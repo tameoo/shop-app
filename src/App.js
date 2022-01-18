@@ -14,11 +14,13 @@ import { Menu } from "./components/Menu";
 import { Filter } from "./components/Filter";
 import { ScrollToTop } from "./components/ScrollToTop";
 import "./App.css";
+import { Alert } from "./components/Alert";
 
 const App = () => {
   const isMenuOpen = useSelector((state) => state.menu.isOpen);
   const isFilterOpen = useSelector((state) => state.filter.isOpen);
-  console.log("render");
+  const isAlertOpen = useSelector((state) => state.alert.isOpen);
+
   return (
     <div className="container">
       <ScrollToTop />
@@ -31,6 +33,7 @@ const App = () => {
         <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
+      {isAlertOpen && <Alert />}
       {isMenuOpen && <Menu />}
       {isFilterOpen && <Filter />}
     </div>

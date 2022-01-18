@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./FavoriteButton.css";
 
-const FavoriteButton = ({ changeSize }) => {
+const FavoriteButton = ({ changeSize, favoriteItem }) => {
   const [isFavorite, setFavorite] = useState(false);
 
   const toggleFavorite = (e) => {
     e.preventDefault();
+    if (!isFavorite) {
+      console.log("favorite");
+    } else {
+      console.log("not favorite");
+    }
     setFavorite(!isFavorite);
   };
 
@@ -17,7 +22,7 @@ const FavoriteButton = ({ changeSize }) => {
     >
       <img
         className={`heart-img ${changeSize && "heart-img-20px"}`}
-        src={`/icons/${isFavorite ? "heart-solid" : "heart"}.svg`}
+        src="/icons/heart.svg"
         alt="heart"
       />
     </button>

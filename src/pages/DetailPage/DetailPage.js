@@ -9,12 +9,15 @@ import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
 import { DetailImgSlider } from "../../components/DetailImgSlider";
-import "./DetailPage.css";
 import { FavoriteButton } from "../../components/FavoriteButton";
+import { useDispatch } from "react-redux";
+import { showAlert } from "../../redux/alertReducer";
+import "./DetailPage.css";
 
 const DetailPage = () => {
   const { id } = useParams();
   const [isModalOpen, setModalOpen] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const slides = [
     "/images/detail.svg",
@@ -118,7 +121,12 @@ const DetailPage = () => {
             <CustomButton
               text={"В корзину"}
               clazz={"primary"}
-              onPressButton={() => navigate("/cart")}
+              onPressButton={() => {
+                setModalOpen(false);
+                dispatch(
+                  showAlert({ isOpen: true, title: "Товар добавлен в корзину" })
+                );
+              }}
             />
           </div>
         </Modal>

@@ -51,7 +51,10 @@ const Header = ({
           )}
           {showCart && (
             <Link to="/cart">
-              <img src="/icons/cart.svg" alt="cart" />
+              <div className="total-cart">
+                <img src="/icons/cart.svg" alt="cart" />
+                <span className="total-cart-circle">1</span>
+              </div>
             </Link>
           )}
         </div>

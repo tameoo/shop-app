@@ -47,6 +47,7 @@ const CustomSlider = ({ slides }) => {
             path={item.path}
             tag={item.tag}
             discount={"25990"}
+            body={item}
           />
         ))}
       </Slider>

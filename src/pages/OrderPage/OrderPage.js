@@ -1,12 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { CustomButton } from "../../components/CustomButton";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { showAlert } from "../../redux/alertReducer";
 import "./OrderPage.css";
 
 const OrderPage = () => {
-  const { id } = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const items = 1;
   const price = "12000";
   const img = "/images/detail.svg";
@@ -90,7 +93,21 @@ const OrderPage = () => {
               <span>{+price + 1000} ₸</span>
             </div>
           </div>
-          <CustomButton text={"Заказать"} clazz={"prevent"} />
+          <CustomButton
+            text={"Заказать"}
+            clazz={"prevent"}
+            onPressButton={(e) => {
+              e.preventDefault();
+              navigate(-1);
+              dispatch(
+                showAlert({
+                  isOpen: true,
+                  title: "Заказ оформлен",
+                  text: "В ближайшее время с вами свяжутся консультанты магазина",
+                })
+              );
+            }}
+          />
         </form>
       </section>
       <Footer />
