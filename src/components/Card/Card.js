@@ -5,13 +5,27 @@ import { Tag } from "../Tag/Tag";
 import "./Card.css";
 
 const Card = ({ id, title, price, path, discount, tag, body }) => {
+  const tagDiv = [];
   return (
     <Link to={`/detail/${id}`}>
       <div className="card">
         <div className="card-stack">
           <img className="card-img" src={path} alt={title} />
           <FavoriteButton favoriteItem={body} />
-          {tag && <Tag text={tag} />}
+          {tag &&
+            Object.entries(tag).map((item) => {
+              if (item[0] === "discount" || item[0] === "credit") {
+                tagDiv.push(item);
+                return;
+              }
+
+              return <Tag clazz={item[0]} text={item[1]} />;
+            })}
+          <div className="tag-wrapper">
+            {tagDiv.map((item) => (
+              <Tag clazz={item[0]} text={item[1]} />
+            ))}
+          </div>
         </div>
         <p className="card-title">{title}</p>
         {price && (

@@ -40,7 +40,7 @@ const DetailPage = () => {
               <span className="card-price">12 490 ₸</span>
               <span className="card-discount">25 990 ₸</span>
             </div>
-            <Tag text={"-50%"} tagCard={false} />
+            <Tag text={"-50%"} tagCard={false} clazz={"discount"} />
           </div>
           <p className="detail-descr">
             Платье миди с круглым вырезом и длинными рукавами со складками.

@@ -1,9 +1,9 @@
 import React from "react";
 import "./Tag.css";
 
-const Tag = ({ text, tagCard = true }) => {
+const Tag = ({ text, clazz, tagCard }) => {
   return (
-    <div className={`tag ${tagCard && "tag-card"}`}>
+    <div className={`tag tag-${clazz}`}>
       <div className="tag-inner">{text}</div>
     </div>
   );
