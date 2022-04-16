@@ -32,7 +32,7 @@ const OrderPage = () => {
         <form className="order-form">
           <div className="order-form-controll">
             <input
-              className="order-text"
+              className="input order-text"
               type="text"
               placeholder="Введите имя"
             />
@@ -40,7 +40,7 @@ const OrderPage = () => {
           </div>
           <div className="order-form-controll">
             <input
-              className="order-text"
+              className="input order-text"
               type="text"
               placeholder="+7 (xxx) xxx xx xx"
             />
@@ -71,7 +71,7 @@ const OrderPage = () => {
             <div className="order-form-controll">
               <input
                 type="text"
-                className="order-text"
+                className="input order-text"
                 placeholder="Введите адрес"
               />
               <img

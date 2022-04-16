@@ -48,10 +48,15 @@
 }
 
 .color-circle {
-  height: 30px;
-  width: 30px;
+  height: 20px;
+  width: 20px;
   background: #53d160;
   border-radius: 100%;
+  transition: 0.3s ease;
+}
+
+.color-circle-selected {
+  transform: scale(1.5);
 }
 
 .detail-btn-group {

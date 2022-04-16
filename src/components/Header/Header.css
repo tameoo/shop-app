@@ -26,7 +26,13 @@
   background: transparent;
 }
 
+.header-img-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .total-cart {
+  display: inherit;
   position: relative;
 }
 

@@ -45,12 +45,12 @@ const Header = ({
         <div className="header-block">
           {showAdmin && <button className="text-btn">Админ панель</button>}
           {showFavorite && (
-            <Link to="/favorites">
+            <Link className="header-img-wrapper" to="/favorites">
               <img src="/icons/heart-regular.svg" alt="heart" />
             </Link>
           )}
           {showCart && (
-            <Link to="/cart">
+            <Link className="header-img-wrapper" to="/cart">
               <div className="total-cart">
                 <img src="/icons/cart.svg" alt="cart" />
                 <span className="total-cart-circle">1</span>

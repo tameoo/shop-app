@@ -20,6 +20,17 @@ const SubCategoryPage = () => {
     <React.Fragment>
       <Header title={title} />
       <SearchForm />
+      <div className="no-result">
+        <h3 className="no-result-search">
+          Результаты поиска: Oversize футболка
+        </h3>
+        <img
+          className="no-result-img"
+          src="/images/error.svg"
+          alt="no result"
+        />
+        <p className="no-result-text">По вашему запросу ничего не найдено</p>
+      </div>
       <div className="setting">
         <Option />
         <button

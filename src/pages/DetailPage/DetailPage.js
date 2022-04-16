@@ -19,8 +19,10 @@ import "./DetailPage.css";
 const DetailPage = () => {
   const { id } = useParams();
   const [isModalOpen, setModalOpen] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const slides = [
     "/images/detail.svg",
     "/images/detail.svg",
