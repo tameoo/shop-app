@@ -1,11 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Header } from "../../components/Header";
 import { SliderCard } from "../../components/SliderCard";
 import { Footer } from "../../components/Footer";
 import { CategoryButtons } from "../../components/CategoryButtons";
+import { CustomButton } from "../../components/CustomButton";
+
 import "./MainPage.css";
 
 const MainPage = () => {
+  const navigate = useNavigate();
+
+  const onNavigateTo = () => {
+    navigate(`/category/Все товары`);
+  };
+
   return (
     <React.Fragment>
       <Header showAdmin={true} />
@@ -26,6 +36,13 @@ const MainPage = () => {
         buttons={["Футболки", "Рубашки", "Штаны", "Обувь", "Другое"]}
       />
       <SliderCard title={"Футболки"} />
+      <div className="main-page-btn">
+        <CustomButton
+          text={"Показать все"}
+          clazz={"secondary"}
+          onPressButton={onNavigateTo}
+        />
+      </div>
       <Footer />
     </React.Fragment>
   );

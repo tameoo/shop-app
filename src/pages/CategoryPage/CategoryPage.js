@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Footer } from "../../components/Footer";
 import { GridCards } from "../../components/GridCards";
 import { Header } from "../../components/Header";

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showAlert } from "../../redux/alertReducer";
+
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { CustomBox } from "../../components/CustomBox";
@@ -8,10 +11,9 @@ import { CustomDropdown } from "../../components/CustomDropdown";
 import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
-import { DetailImgSlider } from "../../components/DetailImgSlider";
+import { ImgSlider } from "../../components/ImgSlider";
 import { FavoriteButton } from "../../components/FavoriteButton";
-import { useDispatch } from "react-redux";
-import { showAlert } from "../../redux/alertReducer";
+
 import "./DetailPage.css";
 
 const DetailPage = () => {
@@ -30,7 +32,7 @@ const DetailPage = () => {
       <Header title={id} />
       <section className="detail">
         <div className="detail-slider">
-          <DetailImgSlider slides={slides} />
+          <ImgSlider slides={slides} />
           <FavoriteButton changeSize={true} />
         </div>
         <div className="detail-padding">

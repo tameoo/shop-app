@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { CustomButton } from "../../components/CustomButton";
 import { Modal } from "../../components/Modal";
-import { useNavigate } from "react-router-dom";
+
 import "./CartPage.css";
 
 const cartItems = [

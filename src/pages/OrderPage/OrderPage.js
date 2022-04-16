@@ -1,10 +1,12 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { showAlert } from "../../redux/alertReducer";
+
 import { CustomButton } from "../../components/CustomButton";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { showAlert } from "../../redux/alertReducer";
+
 import "./OrderPage.css";
 
 const OrderPage = () => {

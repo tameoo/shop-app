@@ -7,16 +7,10 @@
   margin-bottom: 20px;
 }
 
-.detail-img {
-  width: 100%;
-  min-height: 350px;
-  object-fit: cover;
-  max-height: 500px;
-}
-
 .detail-padding {
   padding: 0px 20px;
 }
+
 .detail-title {
   margin-bottom: 15px;
   font-size: 20px;

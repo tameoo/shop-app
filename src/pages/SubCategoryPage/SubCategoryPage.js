@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+import { showFilter } from "../../redux/filterReducer";
+import { useDispatch } from "react-redux";
+
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { GridCards } from "../../components/GridCards";
 import { subCategoryData } from "./mock";
-import { showFilter } from "../../redux/filterReducer";
-import { useDispatch } from "react-redux";
 import { SearchForm } from "../../components/SearchForm";
 import { CategoryButtons } from "../../components/CategoryButtons/";
+
 import "./SubCategoryPage.css";
 
 const SubCategoryPage = () => {
@@ -20,7 +22,6 @@ const SubCategoryPage = () => {
       <SearchForm />
       <div className="setting">
         <Option />
-
         <button
           className="setting-filter"
           onClick={() => dispatch(showFilter(true))}

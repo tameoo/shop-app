@@ -25,3 +25,7 @@
   transform: translateY(-50%);
   right: 20px;
 }
+
+.main-page-btn {
+  padding: 20px;
+}
