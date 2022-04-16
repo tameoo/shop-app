@@ -77,7 +77,9 @@ const Option = () => {
         {option.map((item) => (
           <li
             key={item}
-            className="option-item"
+            className={`option-item ${
+              item === isActiveOption ? "option-item-active" : ""
+            }`}
             onClick={() => chooseItem(item)}
           >
             {item}
