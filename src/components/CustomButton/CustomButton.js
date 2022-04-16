@@ -1,7 +1,7 @@
 import React from "react";
 import "./CustomButton.css";
 
-const CustomButton = ({ text, icon, clazz, onPressButton }) => {
+const CustomButton = ({ text, icon, clazz = "primary", onPressButton }) => {
   return (
     (icon && (
       <button
