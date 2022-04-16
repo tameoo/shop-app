@@ -1,0 +1,34 @@
+.img-slider-wrapper {
+  position: relative;
+}
+
+.img-slider .slick-track {
+  gap: 0px;
+}
+
+.img-slider {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -5px;
+  display: flex;
+}
+
+.slick-dots li {
+  width: 100%;
+}
+
+.slick-dot-custom {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+}
+
+.slick-active .slick-dot-custom {
+  background: #f25e7f;
+}
