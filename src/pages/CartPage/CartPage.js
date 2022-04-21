@@ -44,7 +44,7 @@ const CartPage = () => {
 
   return (
     <React.Fragment>
-      <Header title={"Корзина"} showCart={false} />
+      <Header title={"Корзина"} />
       <section className="cart-page">
         <div className="cart-items">
           {cartItems.map(

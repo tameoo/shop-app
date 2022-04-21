@@ -18,11 +18,7 @@ const OrderPage = () => {
 
   return (
     <React.Fragment>
-      <Header
-        title={"Оформление заказа"}
-        showBackIcon={true}
-        showButtons={false}
-      />
+      <Header title={"Оформление заказа"} showBackIcon />
       <section className="order">
         <div className="order-header">
           <h3>Заказ</h3>

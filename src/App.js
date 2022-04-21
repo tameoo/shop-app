@@ -8,7 +8,6 @@ import {
   SubCategoryPage,
   DetailPage,
   OrderPage,
-  FavoritePage,
   CartPage,
 } from "./pages";
 import { Menu } from "./components/Menu";
@@ -32,7 +31,6 @@ const App = () => {
         <Route path="/category/:title" element={<SubCategoryPage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
         <Route path="/order" element={<OrderPage />} />
-        <Route path="/favorites" element={<FavoritePage />} />
         <Route path="/cart" element={<CartPage />} />
       </Routes>
       {isAlertOpen && <Alert />}

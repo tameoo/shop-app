@@ -8,7 +8,7 @@ import { categoryData } from "./mock";
 const CategoryPage = () => {
   return (
     <React.Fragment>
-      <Header title={"Все категории"} showAdmin={false} />
+      <Header title={"Все категории"} />
       <GridCards render={categoryData} />
       <Footer />
     </React.Fragment>

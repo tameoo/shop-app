@@ -18,7 +18,7 @@ const MainPage = () => {
 
   return (
     <React.Fragment>
-      <Header showAdmin={true} />
+      <Header />
       <main className="main">
         <h1 className="main-title">Название</h1>
         <p className="main-descr">
