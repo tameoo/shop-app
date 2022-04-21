@@ -5,14 +5,7 @@ import { showMenu } from "../../redux/menuReducer";
 
 import "./Header.css";
 
-const Header = ({
-  title,
-  showBackIcon = false,
-  showAdmin = false,
-  showButtons = true,
-  showCart = true,
-  showFavorite = true,
-}) => {
+const Header = ({ title, showBackIcon = false }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -41,24 +34,14 @@ const Header = ({
           <img src="/icons/logo.svg" alt="logo" />
         )}
       </div>
-      {showButtons && (
-        <div className="header-block">
-          {showAdmin && <button className="text-btn">Админ панель</button>}
-          {showFavorite && (
-            <Link to="/favorites">
-              <img src="/icons/heart-regular.svg" alt="heart" />
-            </Link>
-          )}
-          {showCart && (
-            <Link to="/cart">
-              <div className="total-cart">
-                <img src="/icons/cart.svg" alt="cart" />
-                <span className="total-cart-circle">1</span>
-              </div>
-            </Link>
-          )}
-        </div>
-      )}
+      <div className="header-block">
+        <Link className="header-img-wrapper" to="/cart">
+          <div className="total-cart">
+            <img src="/icons/cart.svg" alt="cart" />
+            <span className="total-cart-circle">1</span>
+          </div>
+        </Link>
+      </div>
     </header>
   );
 };

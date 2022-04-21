@@ -11,17 +11,17 @@ const CustomSlider = ({ slides }) => {
     dots: false,
     slidesToShow: 5,
     slidesToScroll: 2,
-    infinite: true,
+    infinite: false,
     speed: 500,
     responsive: [
       {
-        breakpoint: 900,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 4,
         },
       },
       {
-        breakpoint: 650,
+        breakpoint: 768,
         settings: {
           slidesToShow: 3,
         },

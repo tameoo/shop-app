@@ -1,9 +1,16 @@
-.detail-img-wrapper {
+.img-slider-wrapper {
   position: relative;
 }
 
-.detail-slider .slick-track {
+.img-slider .slick-track {
   gap: 0px;
+}
+
+.img-slider {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  max-height: 500px;
 }
 
 .slick-dots {

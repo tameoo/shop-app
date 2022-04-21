@@ -17,16 +17,13 @@
   color: #252728;
 }
 
-.text-btn {
-  font-size: 14px;
-  line-height: 24px;
-  color: #969caf;
-  border: none;
-  outline: none;
-  background: transparent;
+.header-img-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .total-cart {
+  display: inherit;
   position: relative;
 }
 

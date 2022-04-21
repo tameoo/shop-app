@@ -2,9 +2,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import "./DetailImgSlider.css";
+import "./ImgSlider.css";
 
-const DetailImgSlider = ({ slides }) => {
+const ImgSlider = ({ slides }) => {
   const sliderSettings = {
     arrows: false,
     dots: true,
@@ -17,14 +17,14 @@ const DetailImgSlider = ({ slides }) => {
   };
 
   return (
-    <Slider {...sliderSettings} className="detail-slider">
+    <Slider {...sliderSettings} className="img-slider">
       {slides.map((item, index) => (
-        <div key={index} className="detail-img-wrapper">
-          <img className="detail-img" src={item} alt="detail" />
+        <div key={index} className="img-slider-wrapper">
+          <img className="img-slider" src={item} alt="detail" />
         </div>
       ))}
     </Slider>
   );
 };
 
-export { DetailImgSlider };
+export { ImgSlider };

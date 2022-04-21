@@ -1,24 +1,28 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
+import { useDispatch } from "react-redux";
+import { showAlert } from "../../redux/alertReducer";
+
 import { CustomBox } from "../../components/CustomBox";
 import { CustomButton } from "../../components/CustomButton";
 import { CustomDropdown } from "../../components/CustomDropdown";
 import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
-import { DetailImgSlider } from "../../components/DetailImgSlider";
+import { ImgSlider } from "../../components/ImgSlider";
 import { FavoriteButton } from "../../components/FavoriteButton";
-import { useDispatch } from "react-redux";
-import { showAlert } from "../../redux/alertReducer";
+
+import { DefaultLayout } from "../../layouts/default";
+
 import "./DetailPage.css";
 
 const DetailPage = () => {
   const { id } = useParams();
   const [isModalOpen, setModalOpen] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
   const slides = [
     "/images/detail.svg",
     "/images/detail.svg",
@@ -27,65 +31,65 @@ const DetailPage = () => {
 
   return (
     <React.Fragment>
-      <Header title={id} />
-      <section className="detail">
-        <div className="detail-slider">
-          <DetailImgSlider slides={slides} />
-          <FavoriteButton changeSize={true} />
-        </div>
-        <div className="detail-padding">
-          <h2 className="detail-title">Платье из бархата с драпировкой</h2>
-          <div className="detail-subtitle">
-            <div className="card-price-block">
-              <span className="card-price">12 490 ₸</span>
-              <span className="card-discount">25 990 ₸</span>
-            </div>
-            <Tag text={"-50%"} tagCard={false} clazz={"discount"} />
+      <DefaultLayout title={id}>
+        <section className="detail">
+          <div className="detail-slider">
+            <ImgSlider slides={slides} />
+            <FavoriteButton changeSize={true} />
           </div>
-          <p className="detail-descr">
-            Платье миди с круглым вырезом и длинными рукавами со складками.
-            Разрез снизу, потайная застежка-молния сзади.
-          </p>
-          <div className="detail-option">
-            <h3>Выберите размер</h3>
-            <div className="detail-option-block">
-              <CustomBox text={"S"} />
-              <CustomBox text={"M"} />
-              <CustomBox text={"L"} />
+          <div className="detail-padding">
+            <h2 className="detail-title">Платье из бархата с драпировкой</h2>
+            <div className="detail-subtitle">
+              <div className="card-price-block">
+                <span className="card-price">12 490 ₸</span>
+                <span className="card-discount">25 990 ₸</span>
+              </div>
+              <Tag text={"-50%"} tagCard={false} clazz={"discount"} />
             </div>
-          </div>
-          <div className="detail-option">
-            <h3>Выберите цвет</h3>
-            <div className="detail-option-block">
-              <div className="color-circle"></div>
-              <div className="color-circle"></div>
-              <div className="color-circle"></div>
+            <p className="detail-descr">
+              Платье миди с круглым вырезом и длинными рукавами со складками.
+              Разрез снизу, потайная застежка-молния сзади.
+            </p>
+            <div className="detail-option">
+              <h3>Выберите размер</h3>
+              <div className="detail-option-block">
+                <CustomBox text={"S"} />
+                <CustomBox text={"M"} />
+                <CustomBox text={"L"} />
+              </div>
             </div>
-          </div>
-          <div className="detail-btn-group">
-            <CustomButton
-              text={"Заказать"}
-              clazz={"primary"}
-              onPressButton={() => setModalOpen(true)}
+            <div className="detail-option">
+              <h3>Выберите цвет</h3>
+              <div className="detail-option-block">
+                <div className="color-circle"></div>
+                <div className="color-circle"></div>
+                <div className="color-circle"></div>
+              </div>
+            </div>
+            <div className="detail-btn-group">
+              <CustomButton
+                text={"Заказать"}
+                clazz={"primary"}
+                onPressButton={() => setModalOpen(true)}
+              />
+              <CustomButton text={"Написать"} icon={"/icons/whatsup.svg"} />
+            </div>
+            <CustomDropdown
+              title={"Характеристика"}
+              descr={
+                "Стандарт Green to Wear 2.0 направлен на минимизацию воздействия текстильного производства на окружающую среду. Для этого мы разработали программу Inditex The List, которая помогает нам обеспечивать чистоту производственных процессов, а также безопасность и гигиеничность нашей одежды."
+              }
             />
-            <CustomButton text={"Написать"} icon={"/icons/whatsup.svg"} />
+            <CustomDropdown
+              title={"Доставка"}
+              descr={
+                "Стандарт Green to Wear 2.0 направлен на минимизацию воздействия текстильного производства на окружающую среду. Для этого мы разработали программу Inditex The List, которая помогает нам обеспечивать чистоту производственных процессов, а также безопасность и гигиеничность нашей одежды."
+              }
+            />
           </div>
-          <CustomDropdown
-            title={"Характеристика"}
-            descr={
-              "Стандарт Green to Wear 2.0 направлен на минимизацию воздействия текстильного производства на окружающую среду. Для этого мы разработали программу Inditex The List, которая помогает нам обеспечивать чистоту производственных процессов, а также безопасность и гигиеничность нашей одежды."
-            }
-          />
-          <CustomDropdown
-            title={"Доставка"}
-            descr={
-              "Стандарт Green to Wear 2.0 направлен на минимизацию воздействия текстильного производства на окружающую среду. Для этого мы разработали программу Inditex The List, которая помогает нам обеспечивать чистоту производственных процессов, а также безопасность и гигиеничность нашей одежды."
-            }
-          />
-        </div>
-      </section>
-      <SliderCard title={"Похожие товары"} />
-      <Footer />
+        </section>
+        <SliderCard title={"Похожие товары"} />
+      </DefaultLayout>
       {isModalOpen && (
         <Modal onClose={() => setModalOpen(false)}>
           <h2 className="detail-modal-title">Ваш заказ</h2>

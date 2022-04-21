@@ -1,13 +1,6 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  backdrop-filter: blur(1px);
-  width: 100%;
-  z-index: 1000;
-}
-
 .menu-modal {
+  position: absolute;
+  left: 0;
   max-width: 350px;
   padding: 20px;
   background: #fff;

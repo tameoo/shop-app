@@ -1,7 +1,7 @@
 import React from "react";
 import "./CustomButton.css";
 
-const CustomButton = ({ text, icon, clazz, onPressButton }) => {
+const CustomButton = ({ text, icon, clazz = "primary", onPressButton }) => {
   return (
     (icon && (
       <button
@@ -19,6 +19,7 @@ const CustomButton = ({ text, icon, clazz, onPressButton }) => {
           (clazz === "prevent" && "prevent") ||
           (clazz === "secondary-borderless" && "secondary-borderless")
         } ${clazz}`}
+        disabled={clazz === "prevent"}
         onClick={onPressButton}
       >
         {text}

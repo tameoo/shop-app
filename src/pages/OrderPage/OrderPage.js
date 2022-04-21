@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { CustomButton } from "../../components/CustomButton";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
 import { showAlert } from "../../redux/alertReducer";
+
+import { CustomButton } from "../../components/CustomButton";
+import { RegionDropdown } from "../../components/RegionDropdown";
+
+import { DefaultLayout } from "../../layouts/default";
+
 import "./OrderPage.css";
 
 const OrderPage = () => {
+  const [delivery, setDelivery] = useState("Almaty");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const items = 1;
@@ -15,12 +19,7 @@ const OrderPage = () => {
   const img = "/images/detail.svg";
 
   return (
-    <React.Fragment>
-      <Header
-        title={"Оформление заказа"}
-        showBackIcon={true}
-        showButtons={false}
-      />
+    <DefaultLayout title={"Оформление заказа"} showBackIcon>
       <section className="order">
         <div className="order-header">
           <h3>Заказ</h3>
@@ -30,7 +29,7 @@ const OrderPage = () => {
         <form className="order-form">
           <div className="order-form-controll">
             <input
-              className="order-text"
+              className="input order-text"
               type="text"
               placeholder="Введите имя"
             />
@@ -38,7 +37,7 @@ const OrderPage = () => {
           </div>
           <div className="order-form-controll">
             <input
-              className="order-text"
+              className="input order-text"
               type="text"
               placeholder="+7 (xxx) xxx xx xx"
             />
@@ -52,24 +51,41 @@ const OrderPage = () => {
             <h4>Доставка</h4>
             <div className="order-delivery-location">
               <label className="order-delivery-btn">
-                <input type="radio" className="order-radio" name="radio" />
+                <input
+                  type="radio"
+                  className="order-radio"
+                  name="radio"
+                  checked={delivery === "Almaty"}
+                  onChange={() => setDelivery("Almaty")}
+                />
                 <div className="order-delivery-wrapper">
                   <h4>По Алматы</h4>
                   <h5>от 1 дня, 1000 ₸</h5>
                 </div>
               </label>
               <label className="order-delivery-btn">
-                <input type="radio" className="order-radio" name="radio" />
+                <input
+                  type="radio"
+                  className="order-radio"
+                  name="radio"
+                  checked={delivery === "Another"}
+                  onChange={() => setDelivery("Another")}
+                />
                 <div className="order-delivery-wrapper">
                   <h4>В другие города Казахстана</h4>
                   <h5>от 7 дней, 1000 ₸</h5>
                 </div>
               </label>
             </div>
+            {delivery === "Another" && (
+              <div className="order-form-controll">
+                <RegionDropdown />
+              </div>
+            )}
             <div className="order-form-controll">
               <input
                 type="text"
-                className="order-text"
+                className="input order-text"
                 placeholder="Введите адрес"
               />
               <img
@@ -110,8 +126,7 @@ const OrderPage = () => {
           />
         </form>
       </section>
-      <Footer />
-    </React.Fragment>
+    </DefaultLayout>
   );
 };
 

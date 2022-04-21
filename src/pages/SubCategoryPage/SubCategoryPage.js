@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
-import { GridCards } from "../../components/GridCards";
-import { subCategoryData } from "./mock";
 import { showFilter } from "../../redux/filterReducer";
 import { useDispatch } from "react-redux";
+
+import { GridCards } from "../../components/GridCards";
+import { subCategoryData } from "./mock";
 import { SearchForm } from "../../components/SearchForm";
 import { CategoryButtons } from "../../components/CategoryButtons/";
+
+import { DefaultLayout } from "../../layouts/default";
+
 import "./SubCategoryPage.css";
 
 const SubCategoryPage = () => {
@@ -15,12 +17,21 @@ const SubCategoryPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <React.Fragment>
-      <Header title={title} />
+    <DefaultLayout title={title}>
       <SearchForm />
+      <div className="no-result">
+        <h3 className="no-result-search">
+          Результаты поиска: Oversize футболка
+        </h3>
+        <img
+          className="no-result-img"
+          src="/images/error.svg"
+          alt="no result"
+        />
+        <p className="no-result-text">По вашему запросу ничего не найдено</p>
+      </div>
       <div className="setting">
         <Option />
-
         <button
           className="setting-filter"
           onClick={() => dispatch(showFilter(true))}
@@ -31,8 +42,7 @@ const SubCategoryPage = () => {
       </div>
       <CategoryButtons buttons={["Все", "Женщинам", "Мужчинам", "Детям"]} />
       <GridCards render={subCategoryData} />
-      <Footer />
-    </React.Fragment>
+    </DefaultLayout>
   );
 };
 
@@ -76,7 +86,9 @@ const Option = () => {
         {option.map((item) => (
           <li
             key={item}
-            className="option-item"
+            className={`option-item ${
+              item === isActiveOption ? "option-item-active" : ""
+            }`}
             onClick={() => chooseItem(item)}
           >
             {item}

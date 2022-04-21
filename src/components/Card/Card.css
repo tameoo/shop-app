@@ -1,9 +1,11 @@
 .card {
   display: inline-block;
+  width: 100%;
 }
 
 .card-stack {
-  height: 190px;
+  height: 220px;
+  width: 100%;
   position: relative;
   margin-bottom: 10px;
 }

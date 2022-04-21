@@ -13,17 +13,17 @@ const Card = ({ id, title, price, path, discount, tag, body }) => {
           <img className="card-img" src={path} alt={title} />
           <FavoriteButton favoriteItem={body} />
           {tag &&
-            Object.entries(tag).map((item) => {
+            Object.entries(tag).map((item, index) => {
               if (item[0] === "discount" || item[0] === "credit") {
                 tagDiv.push(item);
                 return;
               }
 
-              return <Tag clazz={item[0]} text={item[1]} />;
+              return <Tag key={index} clazz={item[0]} text={item[1]} />;
             })}
           <div className="tag-wrapper">
-            {tagDiv.map((item) => (
-              <Tag clazz={item[0]} text={item[1]} />
+            {tagDiv.map((item, index) => (
+              <Tag key={index} clazz={item[0]} text={item[1]} />
             ))}
           </div>
         </div>

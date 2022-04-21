@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import { CustomSlider } from "../CustomSlider";
 import { mockSlides } from "./mock";
 import "./SliderCard.css";

@@ -53,7 +53,6 @@
 }
 
 .option-item {
-  text-align: justify;
   margin-bottom: 5px;
   font-size: 14px;
   line-height: 16px;
@@ -62,4 +61,34 @@
 
 .option-list-active {
   display: block;
+}
+
+.option-item-active {
+  color: #40bfff;
+}
+
+.no-result {
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+.no-result-search {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #252728;
+  text-align: center;
+}
+
+.no-result-img {
+  margin: 20px 0px;
+}
+
+.no-result-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #969caf;
 }

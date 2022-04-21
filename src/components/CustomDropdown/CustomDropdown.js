@@ -10,13 +10,13 @@ const CustomDropdown = ({ title, descr }) => {
         <span>{title}</span>
         {isOpen ? (
           <img
-            className={"dropdown-arrow"}
+            className="dropdown-arrow"
             src="/icons/arrow-down-blue.svg"
             alt="arrow"
           />
         ) : (
           <img
-            className={"dropdown-arrow"}
+            className="dropdown-arrow"
             src="/icons/arrow-down.svg"
             alt="arrow"
           />
