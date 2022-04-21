@@ -19,6 +19,7 @@ const CustomButton = ({ text, icon, clazz = "primary", onPressButton }) => {
           (clazz === "prevent" && "prevent") ||
           (clazz === "secondary-borderless" && "secondary-borderless")
         } ${clazz}`}
+        disabled={clazz === "prevent"}
         onClick={onPressButton}
       >
         {text}
