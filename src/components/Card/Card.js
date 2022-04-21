@@ -16,7 +16,7 @@ const Card = ({ id, title, price, path, discount, tag, body }) => {
             Object.entries(tag).map((item, index) => {
               if (item[0] === "discount" || item[0] === "credit") {
                 tagDiv.push(item);
-                return;
+                return null;
               }
 
               return <Tag key={index} clazz={item[0]} text={item[1]} />;

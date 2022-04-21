@@ -7,9 +7,8 @@
 
 # testing
 /coverage
-
-
-
+/build
+/firebase
 # misc
 .DS_Store
 .env.local
