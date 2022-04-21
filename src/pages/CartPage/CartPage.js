@@ -105,7 +105,6 @@ const CartPage = () => {
           <div className="cart-modal-wrapper">
             <CustomButton text={"Удалить"} clazz={"secondary"} />
           </div>
-          <CustomButton text={"В избранное"} clazz={"primary"} />
         </Modal>
       )}
     </React.Fragment>

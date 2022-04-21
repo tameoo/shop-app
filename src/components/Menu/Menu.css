@@ -1,4 +1,6 @@
 .menu-modal {
+  position: absolute;
+  left: 0;
   max-width: 350px;
   padding: 20px;
   background: #fff;

@@ -4,8 +4,8 @@
 }
 
 .popup {
-  max-width: 600px;
-  width: 90%;
+  max-width: 375px;
+  width: 100%;
   padding: 20px;
   position: relative;
   background: #ffffff;
