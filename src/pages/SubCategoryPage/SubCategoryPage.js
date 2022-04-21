@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import { showFilter } from "../../redux/filterReducer";
 import { useDispatch } from "react-redux";
 
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
 import { GridCards } from "../../components/GridCards";
 import { subCategoryData } from "./mock";
 import { SearchForm } from "../../components/SearchForm";
 import { CategoryButtons } from "../../components/CategoryButtons/";
+
+import { DefaultLayout } from "../../layouts/default";
 
 import "./SubCategoryPage.css";
 
@@ -17,8 +17,7 @@ const SubCategoryPage = () => {
   const dispatch = useDispatch();
 
   return (
-    <React.Fragment>
-      <Header title={title} />
+    <DefaultLayout title={title}>
       <SearchForm />
       <div className="no-result">
         <h3 className="no-result-search">
@@ -43,8 +42,7 @@ const SubCategoryPage = () => {
       </div>
       <CategoryButtons buttons={["Все", "Женщинам", "Мужчинам", "Детям"]} />
       <GridCards render={subCategoryData} />
-      <Footer />
-    </React.Fragment>
+    </DefaultLayout>
   );
 };
 

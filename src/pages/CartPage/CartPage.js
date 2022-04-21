@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
 import { CustomButton } from "../../components/CustomButton";
 import { Modal } from "../../components/Modal";
+
+import { DefaultLayout } from "../../layouts/default";
 
 import "./CartPage.css";
 
@@ -44,58 +44,61 @@ const CartPage = () => {
 
   return (
     <React.Fragment>
-      <Header title={"Корзина"} />
-      <section className="cart-page">
-        <div className="cart-items">
-          {cartItems.map(
-            ({ title, img, size, color, quantity, price, discount }, index) => (
-              <div className="cart-item" key={index}>
-                <div className="detail-modal-header">
-                  <img
-                    className="detail-modal-img cart-detail-img"
-                    src={img}
-                    alt="detail"
-                  />
-                  <div className="detail-modal-descr">
-                    <p>{title}</p>
-                    <span>Размер: {size}</span>
-                    <span>Цвет: {color}</span>
-                  </div>
-                </div>
-                <div className="detail-modal-footer">
-                  <div className="detail-add-item">
+      <DefaultLayout title={"Корзина"}>
+        <section className="cart-page">
+          <div className="cart-items">
+            {cartItems.map(
+              (
+                { title, img, size, color, quantity, price, discount },
+                index
+              ) => (
+                <div className="cart-item" key={index}>
+                  <div className="detail-modal-header">
                     <img
-                      src="/icons/delete.svg"
-                      alt="sign"
-                      onClick={() => setModalOpen(true)}
+                      className="detail-modal-img cart-detail-img"
+                      src={img}
+                      alt="detail"
                     />
-                    <span>{quantity}</span>
-                    <img src="/icons/plus.svg" alt="sign" />
+                    <div className="detail-modal-descr">
+                      <p>{title}</p>
+                      <span>Размер: {size}</span>
+                      <span>Цвет: {color}</span>
+                    </div>
                   </div>
-                  <div className="card-price-block">
-                    <span className="card-discount">{price} ₸</span>
-                    <span className="card-price cart-card-price">
-                      {discount} ₸
-                    </span>
+                  <div className="detail-modal-footer">
+                    <div className="detail-add-item">
+                      <img
+                        src="/icons/delete.svg"
+                        alt="sign"
+                        onClick={() => setModalOpen(true)}
+                      />
+                      <span>{quantity}</span>
+                      <img src="/icons/plus.svg" alt="sign" />
+                    </div>
+                    <div className="card-price-block">
+                      <span className="card-discount">{price} ₸</span>
+                      <span className="card-price cart-card-price">
+                        {discount} ₸
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )
-          )}
-        </div>
-        <div className="order-price">
-          <div className="order-price-items order-price-last">
-            <h3>3 товара на сумму</h3>
-            <span>16 990 ₸</span>
+              )
+            )}
           </div>
-        </div>
-        <CustomButton
-          text={"Оформить заказ"}
-          clazz={"primary"}
-          onPressButton={() => navigate("/order")}
-        />
-      </section>
-      <Footer />
+          <div className="order-price">
+            <div className="order-price-items order-price-last">
+              <h3>3 товара на сумму</h3>
+              <span>16 990 ₸</span>
+            </div>
+          </div>
+          <CustomButton
+            text={"Оформить заказ"}
+            clazz={"primary"}
+            onPressButton={() => navigate("/order")}
+          />
+        </section>
+      </DefaultLayout>
       {isModalOpen && (
         <Modal onClose={() => setModalOpen(false)}>
           <div className="cart-modal-img">
