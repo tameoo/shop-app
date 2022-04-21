@@ -8,6 +8,7 @@ import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 
 import "./OrderPage.css";
+import { RegionDropdown } from "../../components/RegionDropdown/RegionDropdown";
 
 const OrderPage = () => {
   const navigate = useNavigate();
@@ -63,6 +64,9 @@ const OrderPage = () => {
                   <h5>от 7 дней, 1000 ₸</h5>
                 </div>
               </label>
+            </div>
+            <div className="order-form-controll">
+              <RegionDropdown />
             </div>
             <div className="order-form-controll">
               <input
