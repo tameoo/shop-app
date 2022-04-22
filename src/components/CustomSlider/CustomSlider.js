@@ -27,7 +27,7 @@ const CustomSlider = ({ slides }) => {
         },
       },
       {
-        breakpoint: 500,
+        breakpoint: 560,
         settings: {
           slidesToShow: 2,
         },
