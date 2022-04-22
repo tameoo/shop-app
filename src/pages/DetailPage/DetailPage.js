@@ -9,7 +9,7 @@ import { CustomDropdown } from "../../components/CustomDropdown";
 import { SliderCard } from "../../components/SliderCard";
 import { Modal } from "../../components/Modal";
 import { Tag } from "../../components/Tag";
-import { ImgSlider } from "../../components/ImgSlider";
+import { DotsSlider } from "../../components/DotsSlider";
 import { FavoriteButton } from "../../components/FavoriteButton";
 
 import { DefaultLayout } from "../../layouts/default";
@@ -34,7 +34,13 @@ const DetailPage = () => {
       <DefaultLayout title={id}>
         <section className="detail">
           <div className="detail-slider">
-            <ImgSlider slides={slides} />
+            <DotsSlider>
+              {slides.map((item, index) => (
+                <div key={index} className="img-slider-detail-wrapper">
+                  <img className="img-slider-detail" src={item} alt="detail" />
+                </div>
+              ))}
+            </DotsSlider>
             <FavoriteButton changeSize={true} />
           </div>
           <div className="detail-padding">

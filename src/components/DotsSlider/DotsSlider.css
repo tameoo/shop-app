@@ -1,16 +1,5 @@
-.img-slider-wrapper {
-  position: relative;
-}
-
-.img-slider .slick-track {
+.slider-wrapper .slick-track {
   gap: 0px;
-}
-
-.img-slider {
-  width: 100%;
-  min-height: 350px;
-  object-fit: cover;
-  max-height: 500px;
 }
 
 .slick-dots {

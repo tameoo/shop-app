@@ -1,10 +1,10 @@
-.main {
+.intro {
   position: relative;
   background: #f4f6fc;
   padding: 50px 20px;
 }
 
-.main-title {
+.intro-title {
   display: inline-block;
   color: #fff;
   font-size: 20px;
@@ -13,21 +13,28 @@
   margin-bottom: 20px;
 }
 
-.main-descr {
+.intro-descr {
   font-size: 16px;
   line-height: 20px;
   color: #969caf;
 }
 
-.main-img {
+.intro-img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
+  height: 100%;
 }
 
-.main-page-btn {
+.intro-page-btn {
   display: flex;
   justify-content: center;
   padding: 20px;
+}
+
+@media (min-width: 560px) {
+  .intro {
+    padding: 90px 20px;
+  }
 }
