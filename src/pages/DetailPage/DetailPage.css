@@ -125,3 +125,14 @@
   font-size: 18px;
   font-weight: 500;
 }
+
+.img-slider-detail {
+  width: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.img-slider-detail-wrapper {
+  position: relative;
+}
